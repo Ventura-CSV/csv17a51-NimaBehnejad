@@ -13,11 +13,10 @@ def get_range(mapping: dict) -> set:
 
 def is_well_defined(mapping: dict, target: set) -> bool:
     """Return True if every output value is in the target set."""
-    # === TODO ===
-    # Your code here
-    pass
-    # === END TODO ===
-
+    for v in set(mapping.values()):
+        if (v not in target):
+            return False
+    return True
 
 def is_injective(mapping: dict) -> bool:
     """Return True if f is one-to-one (no two inputs map to same output)."""
