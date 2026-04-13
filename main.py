@@ -8,10 +8,7 @@ def get_domain(mapping: dict) -> set:
 
 def get_range(mapping: dict) -> set:
     """Return the range — the set of outputs actually mapped to."""
-    # === TODO ===
-    # Your code here
-    pass
-    # === END TODO ===
+    return set(mapping.values())
 
 
 def is_well_defined(mapping: dict, target: set) -> bool:
