@@ -3,10 +3,7 @@ from __future__ import annotations
 
 def get_domain(mapping: dict) -> set:
     """Return the domain X (all inputs of the function)."""
-    # === TODO ===
-    # Your code here
-    pass
-    # === END TODO ===
+    return set(mapping.keys())
 
 
 def get_range(mapping: dict) -> set:
