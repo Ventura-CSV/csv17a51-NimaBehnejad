@@ -20,10 +20,8 @@ def is_well_defined(mapping: dict, target: set) -> bool:
 
 def is_injective(mapping: dict) -> bool:
     """Return True if f is one-to-one (no two inputs map to same output)."""
-    # === TODO ===
-    # Your code here
-    pass
-    # === END TODO ===
+    # if there are no duplicate outputs, then its injective
+    return len(mapping.values()) == len(set(mapping.values()))
 
 
 def is_surjective(mapping: dict, target: set) -> bool:
