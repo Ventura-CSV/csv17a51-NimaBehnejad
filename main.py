@@ -13,7 +13,9 @@ def get_range(mapping: dict) -> set:
 
 def is_well_defined(mapping: dict, target: set) -> bool:
     """Return True if every output value is in the target set."""
-    for v in set(mapping.values()):
+    # could also do:
+    # all(v in target...)
+    for v in mapping.values():
         if (v not in target):
             return False
     return True
@@ -26,15 +28,9 @@ def is_injective(mapping: dict) -> bool:
 
 def is_surjective(mapping: dict, target: set) -> bool:
     """Return True if f is onto (range == target)."""
-    # === TODO ===
-    # Your code here
-    pass
-    # === END TODO ===
-
+    range = set(mapping.values()) # remove duplicates by making it a set
+    return range == target
 
 def is_bijective(mapping: dict, target: set) -> bool:
     """Return True if f is both injective and surjective."""
-    # === TODO ===
-    # Your code here
-    pass
-    # === END TODO ===
+    return is_injective(mapping) & is_surjective(mapping, target)
